@@ -7,7 +7,16 @@ app.secret_key = "SECRETSECRETSECRET"
 
 
 def is_mel(name, email):
-    """Is this user Mel?"""
+    """Is this user Mel?
+    
+    >>> is_mel('Mel Melitpolski', 'mel@ubermelon.com')
+    True
+    >>> is_mel('Mel Melitpolski', 'another@email.com')
+    True
+    >>> is_mel('Another Name', 'mel@ubermelon.com')
+    True
+    >>> is_mel('Sam Smith', 'sam@smith.com')
+    False"""
 
     return name == "Mel Melitpolski" or email == "mel@ubermelon.com"
 
@@ -114,4 +123,4 @@ def rsvp():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5002)

@@ -1,3 +1,3 @@
 env
-pycache
+*pyc*
 secrets.sh
